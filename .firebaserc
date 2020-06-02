@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "task2-825ad": {
+      "hosting": {
+        "task2": [
+          "task2-825ad"
+        ]
+      }
+    }
+  }
+}
