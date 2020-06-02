@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+      <h4>Task 2 solution by Fuad Suleymanov</h4>
+  </div>
+  <div class="row">
+    <h5><em>Excel Sheet Column Names</em></h5>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <ul class="list-group">
+          <li class="list-group-item">Some comments about this litle app:</li>
+          <li class="list-group-item list-group-item-light"><small>- I use angular 9 app, with bootsrap 4</small></li>
+          <li class="list-group-item list-group-item-light"><small>- about lojic which i use I had step by step comments in app.component.ts file</small></li>
+          <li class="list-group-item list-group-item-light"><small>- Result button disabled if input is empty</small></li>
+        </ul>
+      </div>
+      <form [formGroup]="task2Form" (ngSubmit)="onGetLetter()">
+        <div class="row">
+          <label for="array">Please enter any number</label>
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            placeholder="Enter here" 
+            formControlName="number"
+            [ngClass]="{
+              'is-invalid': number.invalid && number.touched,
+              'is-valid': number.valid && number.touched
+            }">
+        </div>
+        <div class="row">
+          <p>
+            You Entered: {{ formValue }}
+          </p>
+        </div>
+        <div class="row">
+          <button
+            class="btn btn-success"
+            type="submit"
+            [disabled]="!task2Form.valid">Get Result</button>
+        </div>
+        <hr>
+        <div class="row">
+          <h3>
+            Result: {{ result }}
+        </h3>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
